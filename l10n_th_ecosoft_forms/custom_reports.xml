@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<openerp>
+<data>
+
+	<delete model="ir.actions.report.xml" search="[('id', '=', ref('sale.report_sale_order'))]" />
+	<delete model="ir.actions.report.xml" search="[('id', '=', ref('account.account_invoices'))]" />
+			
+	# Quotation
+    <report string="Quotation"
+        model="sale.order"
+        auto="True"
+        name="ecosoft.quotation"
+        rml="l10n_th_ecosoft_forms/report/ecosoft_quotation.jrxml"
+        id="ecosoft_quotation"
+        menu="True"
+        header="False" 
+        />    
+    <record id="ecosoft_quotation" model="ir.actions.report.xml">
+        <field name="jasper_report">True</field>
+        <field name="jasper_output">pdf</field>
+    </record>
+    			
+	# Tax Invoice
+    <report string="Tax Invoice"
+        model="account.invoice"
+        auto="True"
+        name="ecosoft.account.invoice"
+        rml="l10n_th_ecosoft_forms/report/ecosoft_account_invoice.jrxml"
+        id="ecosoft_account_invoice"
+        menu="True"
+        header="False" 
+        />    
+    <record id="ecosoft_account_invoice" model="ir.actions.report.xml">
+        <field name="jasper_report">True</field>
+        <field name="jasper_output">pdf</field>
+        <field name="copies">3</field>
+    </record>
+    			
+	# Receipt
+    <report string="Receipt"
+        model="account.voucher"
+        auto="True"
+        name="ecosoft.account.voucher"
+        rml="l10n_th_ecosoft_forms/report/ecosoft_receipt.jrxml"
+        id="ecosoft_receipt"
+        menu="True"
+        header="False" 
+        />    
+    <record id="ecosoft_receipt" model="ir.actions.report.xml">
+        <field name="jasper_report">True</field>
+        <field name="jasper_output">pdf</field>
+        <field name="copies">3</field>
+    </record>
+</data>
+</openerp>
