@@ -60,3 +60,13 @@ target/
 
 #Ipython Notebook
 .ipynb_checkpoints
+
+
+# Additional
+openerp-server.conf
+*.jasper
+.project
+.pydevproject
+*.settings
+*.*~
+.~*
