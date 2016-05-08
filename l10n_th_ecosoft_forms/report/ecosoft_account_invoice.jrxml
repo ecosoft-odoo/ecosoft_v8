@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Invoice" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
-	<property name="ireport.zoom" value="1.8150000000000166"/>
+	<property name="ireport.zoom" value="0.6997610703146064"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="494"/>
 	<property name="OPENERP_RELATIONS" value="[&quot;invoice_line&quot;]"/>
 	<style name="table" lineSpacing="Single">
 		<box topPadding="2" leftPadding="1" bottomPadding="1" rightPadding="1">
@@ -126,6 +126,9 @@
 		<fieldDescription><![CDATA[amount_total_text_th]]></fieldDescription>
 	</field>
 	<field name="client_order_ref" class="java.lang.String"/>
+	<field name="status" class="java.lang.String">
+		<fieldDescription><![CDATA[state]]></fieldDescription>
+	</field>
 	<group name="UniqueID">
 		<groupExpression><![CDATA[$F{id}]]></groupExpression>
 		<groupFooter>
@@ -149,6 +152,15 @@
 			<rectangle>
 				<reportElement x="451" y="240" width="104" height="276"/>
 			</rectangle>
+			<staticText>
+				<reportElement x="0" y="343" width="555" height="50" forecolor="#FF0000">
+					<printWhenExpression><![CDATA[$F{status}.toString().equals("cancel")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="36" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CANCELLED]]></text>
+			</staticText>
 		</band>
 	</background>
 	<pageHeader>
