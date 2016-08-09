@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Purchase Order" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
-	<property name="ireport.zoom" value="1.6500000000000126"/>
+	<property name="ireport.zoom" value="1.5000000000000113"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="146"/>
 	<property name="OPENERP_RELATIONS" value="[&quot;order_line&quot;]"/>
 	<style name="table" lineSpacing="Single">
 		<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
@@ -423,7 +423,7 @@ Quantity]]></text>
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="16" splitType="Stretch">
+		<band height="31" splitType="Stretch">
 			<textField pattern="" isBlankWhenNull="true">
 				<reportElement style="table_TD" stretchType="RelativeToTallestObject" mode="Transparent" x="0" y="-1" width="39" height="17"/>
 				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
@@ -453,8 +453,8 @@ Quantity]]></text>
 				<textFieldExpression class="java.lang.Number"><![CDATA[$F{product_uom_qty}]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.00;-#,##0.00" isBlankWhenNull="true">
-				<reportElement stretchType="RelativeToTallestObject" mode="Transparent" x="251" y="0" width="139" height="16" backcolor="#80C243"/>
-				<textElement textAlignment="Right" verticalAlignment="Middle" lineSpacing="Single">
+				<reportElement stretchType="RelativeToTallestObject" mode="Transparent" x="251" y="2" width="139" height="15" backcolor="#80C243"/>
+				<textElement textAlignment="Right" verticalAlignment="Top" lineSpacing="Single">
 					<font fontName="Monospaced" size="9" pdfFontName="Garuda.ttf" pdfEncoding="Identity-H"/>
 				</textElement>
 				<textFieldExpression class="java.lang.Number"><![CDATA[$F{price_unit}]]></textFieldExpression>
